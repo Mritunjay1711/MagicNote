@@ -15,7 +15,7 @@ addBtn.addEventListener('click', function(e){
     notesObj.push(addTxt.value);
     localStorage.setItem("notes", JSON.stringify(notesObj));
     addTxt.value = "";
-    console.log(notesObj);
+    // console.log(notesObj);
     showNotes();
 });
 
@@ -80,6 +80,8 @@ search.addEventListener("input", function(){
     Array.from(noteCards).forEach(function(element){
         let cardTxt = element.getElementsByTagName("p")[0].innerText;
 
+
+        //Check if it include the searched word and change the css of the notes
         if(cardTxt.includes(inputVal)){
             element.style.display = "block";
         }
@@ -87,4 +89,12 @@ search.addEventListener("input", function(){
             element.style.display = "none";
         }
     })
-})
+});
+
+
+/*
+Further features:
+1. Add Title
+2. Mark a note as Important
+3. Separate notes by user
+*/
