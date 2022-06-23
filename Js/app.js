@@ -74,7 +74,7 @@ let search = document.getElementById('searchTxt');
 
 search.addEventListener("input", function(){
     let inputVal  = search.value;
-    console.log('input event fired'); 
+    // console.log('input event fired');
 
     let noteCards = document.getElementsByClassName('noteCard');
     Array.from(noteCards).forEach(function(element){
